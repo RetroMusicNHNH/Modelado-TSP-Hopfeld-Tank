@@ -1,0 +1,571 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/apasortcite//global/global}
+    \entry{ElAlaouiEttaouil2023}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b52dee0097b75662a9be24adfbf455db}{%
+           family={El\bibnamedelima Alaoui},
+           familyi={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Mohammed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6cf9fa3d393485c450cfd258e32b184}{%
+           family={Ettaouil},
+           familyi={E\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{fullhash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{bibnamehash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{authorbibnamehash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{authornamehash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{authorfullhash}{67b07c2d9ecab9837e5ce025265b961f}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computing}
+      \field{number}{1}
+      \field{title}{Improving Continuous {Hopfield} Network Stability Using {Runge-Kutta} Method}
+      \field{volume}{22}
+      \field{year}{2023}
+      \field{pages}{29\bibrangedash 34}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.47839/ijc.22.1.2876
+      \endverb
+    \endentry
+    \entry{Goemaere2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=68c0124b4c98abac370ef4fe98add87f}{%
+           family={Goemaere},
+           familyi={G\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b01fb4d6d94872cca3eec31e537af414}{%
+           family={Deleu},
+           familyi={D\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b07a8ccf3a76fcd92f77e7441da8da84}{%
+           family={Demeester},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3da7db3f860fee1eeb298989d827125e}
+      \strng{fullhash}{ec1b1c9f78221312f852701095984e42}
+      \strng{bibnamehash}{ec1b1c9f78221312f852701095984e42}
+      \strng{authorbibnamehash}{ec1b1c9f78221312f852701095984e42}
+      \strng{authornamehash}{3da7db3f860fee1eeb298989d827125e}
+      \strng{authorfullhash}{ec1b1c9f78221312f852701095984e42}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Proceedings of Machine Learning Research}
+      \field{title}{Accelerating {Hopfield} Network Dynamics: Beyond Synchronous Updates and Forward {Euler}}
+      \field{volume}{255}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 21}
+      \range{pages}{21}
+      \verb{eprint}
+      \verb 2311.15673
+      \endverb
+    \endentry
+    \entry{HopfieldTank1985}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=91977512c54b3df2eb57914d939cde02}{%
+           family={Hopfield},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb76ecc74fed7b16690ecc56df8832e1}{%
+           family={Tank},
+           familyi={T\bibinitperiod},
+           given={David\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{fullhash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{bibnamehash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{authorbibnamehash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{authornamehash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{authorfullhash}{2993f92ce318aee33f364b45c7ec2493}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biological Cybernetics}
+      \field{number}{3}
+      \field{title}{"Neural" computation of decisions in optimization problems}
+      \field{volume}{52}
+      \field{year}{1985}
+      \field{pages}{141\bibrangedash 152}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/BF00339943
+      \endverb
+    \endentry
+    \entry{Karp1972}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5290385c419686f6312edeb3578dc9cf}{%
+           family={Karp},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=61845d8713df720183097da97764018e}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Raymond\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=0c49a2a69eb15e588235d478d36d70ea}{%
+           family={Thatcher},
+           familyi={T\bibinitperiod},
+           given={James\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Plenum Press}%
+      }
+      \strng{namehash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{fullhash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{bibnamehash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{authorbibnamehash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{authornamehash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{authorfullhash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{editorbibnamehash}{3aab04d268ea6e8583a3d7d8e964386b}
+      \strng{editornamehash}{3aab04d268ea6e8583a3d7d8e964386b}
+      \strng{editorfullhash}{3aab04d268ea6e8583a3d7d8e964386b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Complexity of Computer Computations}
+      \field{title}{Reducibility among Combinatorial Problems}
+      \field{year}{1972}
+      \field{pages}{85\bibrangedash 103}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/978-1-4684-2001-2_9
+      \endverb
+    \endentry
+    \entry{Potvin2003}{inbook}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=156d517208f70e145503aa8b5ec9849b}{%
+           family={Potvin},
+           familyi={P\bibinitperiod},
+           given={Jean-Yves},
+           giveni={J\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c86f45187b66bf063131c1b4bb5d4225}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Kate\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=dc17e11972df8b60f2996162604f37ac}{%
+           family={Glover},
+           familyi={G\bibinitperiod},
+           given={Fred},
+           giveni={F\bibinitperiod}}}%
+        {{hash=fa8f595fde942b311affc4b95c9d38e7}{%
+           family={Kochenberger},
+           familyi={K\bibinitperiod},
+           given={Gary\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{fullhash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{bibnamehash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{authorbibnamehash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{authornamehash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{authorfullhash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{editorbibnamehash}{70b3a126ea55b7aca3769056cf48a54b}
+      \strng{editornamehash}{70b3a126ea55b7aca3769056cf48a54b}
+      \strng{editorfullhash}{70b3a126ea55b7aca3769056cf48a54b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of Metaheuristics}
+      \field{title}{Artificial Neural Networks for Combinatorial Optimization}
+      \field{year}{2003}
+      \field{pages}{429\bibrangedash 455}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1007/0-306-48056-5_15
+      \endverb
+    \endentry
+    \entry{TalavanYanez2002}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6d7c696ecb47b54147a462aa08c03af0}{%
+           family={Talaván},
+           familyi={T\bibinitperiod},
+           given={Pedro\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61c2ddfb21119f365fd416f07cfcf7b1}{%
+           family={Yáñez},
+           familyi={Y\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{fullhash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{bibnamehash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{authorbibnamehash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{authornamehash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{authorfullhash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{3}
+      \field{title}{Parameter setting of the {Hopfield} network applied to {TSP}}
+      \field{volume}{15}
+      \field{year}{2002}
+      \field{pages}{363\bibrangedash 373}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/S0893-6080(02)00021-7
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{nyt/global//global/global}
+    \entry{ElAlaouiEttaouil2023}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b52dee0097b75662a9be24adfbf455db}{%
+           family={El\bibnamedelima Alaoui},
+           familyi={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Mohammed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6cf9fa3d393485c450cfd258e32b184}{%
+           family={Ettaouil},
+           familyi={E\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{fullhash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{bibnamehash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{authorbibnamehash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{authornamehash}{67b07c2d9ecab9837e5ce025265b961f}
+      \strng{authorfullhash}{67b07c2d9ecab9837e5ce025265b961f}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computing}
+      \field{number}{1}
+      \field{title}{Improving Continuous {Hopfield} Network Stability Using {Runge-Kutta} Method}
+      \field{volume}{22}
+      \field{year}{2023}
+      \field{pages}{29\bibrangedash 34}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.47839/ijc.22.1.2876
+      \endverb
+    \endentry
+    \entry{Goemaere2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=68c0124b4c98abac370ef4fe98add87f}{%
+           family={Goemaere},
+           familyi={G\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b01fb4d6d94872cca3eec31e537af414}{%
+           family={Deleu},
+           familyi={D\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b07a8ccf3a76fcd92f77e7441da8da84}{%
+           family={Demeester},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3da7db3f860fee1eeb298989d827125e}
+      \strng{fullhash}{ec1b1c9f78221312f852701095984e42}
+      \strng{bibnamehash}{ec1b1c9f78221312f852701095984e42}
+      \strng{authorbibnamehash}{ec1b1c9f78221312f852701095984e42}
+      \strng{authornamehash}{3da7db3f860fee1eeb298989d827125e}
+      \strng{authorfullhash}{ec1b1c9f78221312f852701095984e42}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Proceedings of Machine Learning Research}
+      \field{title}{Accelerating {Hopfield} Network Dynamics: Beyond Synchronous Updates and Forward {Euler}}
+      \field{volume}{255}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 21}
+      \range{pages}{21}
+      \verb{eprint}
+      \verb 2311.15673
+      \endverb
+    \endentry
+    \entry{HopfieldTank1985}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=91977512c54b3df2eb57914d939cde02}{%
+           family={Hopfield},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb76ecc74fed7b16690ecc56df8832e1}{%
+           family={Tank},
+           familyi={T\bibinitperiod},
+           given={David\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{fullhash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{bibnamehash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{authorbibnamehash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{authornamehash}{2993f92ce318aee33f364b45c7ec2493}
+      \strng{authorfullhash}{2993f92ce318aee33f364b45c7ec2493}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biological Cybernetics}
+      \field{number}{3}
+      \field{title}{"Neural" computation of decisions in optimization problems}
+      \field{volume}{52}
+      \field{year}{1985}
+      \field{pages}{141\bibrangedash 152}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/BF00339943
+      \endverb
+    \endentry
+    \entry{Karp1972}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5290385c419686f6312edeb3578dc9cf}{%
+           family={Karp},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=61845d8713df720183097da97764018e}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Raymond\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=0c49a2a69eb15e588235d478d36d70ea}{%
+           family={Thatcher},
+           familyi={T\bibinitperiod},
+           given={James\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Plenum Press}%
+      }
+      \strng{namehash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{fullhash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{bibnamehash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{authorbibnamehash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{authornamehash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{authorfullhash}{5290385c419686f6312edeb3578dc9cf}
+      \strng{editorbibnamehash}{3aab04d268ea6e8583a3d7d8e964386b}
+      \strng{editornamehash}{3aab04d268ea6e8583a3d7d8e964386b}
+      \strng{editorfullhash}{3aab04d268ea6e8583a3d7d8e964386b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Complexity of Computer Computations}
+      \field{title}{Reducibility among Combinatorial Problems}
+      \field{year}{1972}
+      \field{pages}{85\bibrangedash 103}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/978-1-4684-2001-2_9
+      \endverb
+    \endentry
+    \entry{Potvin2003}{inbook}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=156d517208f70e145503aa8b5ec9849b}{%
+           family={Potvin},
+           familyi={P\bibinitperiod},
+           given={Jean-Yves},
+           giveni={J\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c86f45187b66bf063131c1b4bb5d4225}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Kate\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=dc17e11972df8b60f2996162604f37ac}{%
+           family={Glover},
+           familyi={G\bibinitperiod},
+           given={Fred},
+           giveni={F\bibinitperiod}}}%
+        {{hash=fa8f595fde942b311affc4b95c9d38e7}{%
+           family={Kochenberger},
+           familyi={K\bibinitperiod},
+           given={Gary\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{fullhash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{bibnamehash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{authorbibnamehash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{authornamehash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{authorfullhash}{f11c521896a3f9eed3f4003691121c9f}
+      \strng{editorbibnamehash}{70b3a126ea55b7aca3769056cf48a54b}
+      \strng{editornamehash}{70b3a126ea55b7aca3769056cf48a54b}
+      \strng{editorfullhash}{70b3a126ea55b7aca3769056cf48a54b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of Metaheuristics}
+      \field{title}{Artificial Neural Networks for Combinatorial Optimization}
+      \field{year}{2003}
+      \field{pages}{429\bibrangedash 455}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1007/0-306-48056-5_15
+      \endverb
+    \endentry
+    \entry{TalavanYanez2002}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6d7c696ecb47b54147a462aa08c03af0}{%
+           family={Talaván},
+           familyi={T\bibinitperiod},
+           given={Pedro\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61c2ddfb21119f365fd416f07cfcf7b1}{%
+           family={Yáñez},
+           familyi={Y\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{fullhash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{bibnamehash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{authorbibnamehash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{authornamehash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \strng{authorfullhash}{47adb6062c6afc09c8553a22ca31c6aa}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{3}
+      \field{title}{Parameter setting of the {Hopfield} network applied to {TSP}}
+      \field{volume}{15}
+      \field{year}{2002}
+      \field{pages}{363\bibrangedash 373}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/S0893-6080(02)00021-7
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

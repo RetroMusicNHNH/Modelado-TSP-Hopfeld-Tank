@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Proyecto.blg'
+[187] biber-MSWIN64:340> INFO - === 
+[233] Biber.pm:419> INFO - Reading 'Proyecto.bcf'
+[396] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[421] Biber.pm:4419> INFO - Processing section 0
+[435] Biber.pm:4610> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[514] bibtex.pm:1713> INFO - LaTeX decoding ...
+[534] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[618] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[618] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[618] Biber.pm:4239> INFO - Sorting list 'nyt/apasortcite//global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[638] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[639] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[639] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[646] bbl.pm:660> INFO - Writing 'Proyecto.bbl' with encoding 'UTF-8'
+[655] bbl.pm:763> INFO - Output to Proyecto.bbl

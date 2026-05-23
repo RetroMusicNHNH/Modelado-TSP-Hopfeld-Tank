@@ -1,0 +1,312 @@
+\documentclass[12pt,a4paper]{article}
+
+% ============================================================
+% PAQUETES NECESARIOS
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+% Paquetes para APA 7
+\usepackage{csquotes}
+\usepackage[backend=biber, style=apa, sortcites=true, sorting=nyt, language=spanish]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{referencias.bib}
+
+% Quitar los enlaces DOI/URL/arXiv de la lista de Referencias
+\AtEveryBibitem{%
+    \clearfield{doi}%
+    \clearfield{url}%
+    \clearfield{eprint}%
+    \clearfield{eprinttype}%
+}
+
+% ============================================================
+% MÁRGENES
+% ============================================================
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm,
+    headheight=15pt
+}
+
+% ============================================================
+% COLORES
+% ============================================================
+\definecolor{azulUCR}{RGB}{0, 51, 102}
+\definecolor{azulClaro}{RGB}{173, 216, 230}
+\definecolor{verdeUCR}{RGB}{0, 128, 0}
+\definecolor{grisClaro}{RGB}{245, 245, 245}
+\definecolor{naranjaUCR}{RGB}{255, 140, 0}
+
+% ============================================================
+% HIPERVÍNCULOS
+% ============================================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=azulUCR,
+    filecolor=azulUCR,
+    urlcolor=azulUCR,
+    citecolor=azulUCR
+}
+
+% ============================================================
+% ENCABEZADO Y PIE DE PÁGINA
+% ============================================================
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{azulUCR}{\small MO-0006 Ecuaciones Diferenciales con Modelos}}
+\lhead{\textcolor{azulUCR}{\small Universidad de Costa Rica}}
+\rfoot{\textcolor{azulUCR}{\thepage}}
+
+% ============================================================
+% FORMATO DE SECCIONES
+% ============================================================
+\titleformat{\section}
+{\color{azulUCR}\normalfont\Large\bfseries}
+{\thesection}{1em}{}[\color{azulUCR}\titlerule]
+
+\titleformat{\subsection}
+{\color{azulUCR}\normalfont\large\bfseries}
+{\thesubsection}{1em}{}
+
+% ============================================================
+% CAJAS COLOREADAS
+% ============================================================
+\newtcolorbox{destacado}[1][]{
+    colback=azulClaro!10,
+    colframe=azulUCR,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=1pt,
+    arc=2mm
+}
+
+\newtcolorbox{objetivo}[1][]{
+    colback=verdeUCR!10,
+    colframe=verdeUCR,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=1pt,
+    arc=2mm,
+    left=5pt,
+    right=5pt
+}
+
+\newtcolorbox{metodologia}[1][]{
+    colback=naranjaUCR!10,
+    colframe=naranjaUCR,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=1pt,
+    arc=2mm
+}
+
+\begin{document}
+
+% ============================================================
+% PORTADA
+% ============================================================
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    
+    {\huge \textcolor{azulUCR}{\textbf{UNIVERSIDAD DE COSTA RICA}}}\\[0.5cm]
+    {\Large Sede de Occidente}\\[0.3cm]
+    {\Large Carrera: Modelación Matemática}\\[2cm]
+    
+    \begin{tcolorbox}[
+        colback=azulClaro!20,
+        colframe=azulUCR,
+        boxrule=2pt,
+        arc=4mm,
+        width=0.9\textwidth
+    ]
+        \centering
+        \vspace{0.5cm}
+        {\Large \textbf{AVANCE I}}\\[0.3cm]
+        {\LARGE \textbf{Formulación del modelo de Hopfield-Tank para el Problema del Viajero}}\\[0.9cm]
+        {\Large \textbf{Instancias pequeñas, matriz de distancias, función de energía y sistema de EDOs}}
+        \vspace{0.5cm}
+    \end{tcolorbox}
+    
+    \vspace{2cm}
+    
+    \begin{tabular}{ll}
+        \textbf{Estudiantes:} & Emerson Portillo Rodríguez\\
+                              & Luis Enrique Reyes García\\[0.5cm]
+        \textbf{Curso:} & MO-0006 Ecuaciones Diferenciales Ordinarias con Modelos\\
+        \textbf{Profesor:} & Jorge Luis Salazar Chaves\\[0.5cm]
+        \textbf{I Ciclo} & 2026
+    \end{tabular}
+    
+    \vfill
+    {\large \today}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+% ============================================================
+% INTRODUCCIÓN
+% ============================================================
+\section{Contexto del modelo y planteamiento del problema}
+
+El Problema del Viajero, conocido por sus siglas en inglés como TSP, consiste en encontrar la ruta de menor longitud total que visita un conjunto de ciudades exactamente una vez cada una y regresa al punto de partida. Aunque su enunciado es engañosamente simple, este problema pertenece a la clase NP-hard, lo cual significa que no se conoce ningún algoritmo capaz de encontrar la ruta óptima de manera eficiente cuando el número de ciudades crece \parencite{Karp1972}. Su importancia teórica y práctica lo ha convertido en uno de los problemas más estudiados de la matemática aplicada y la computación, ya que aparece naturalmente en logística, planificación de rutas, diseño de circuitos y secuenciación genómica.
+
+La propuesta original de \textcite{HopfieldTank1985} introdujo una idea conceptualmente revolucionaria para atacar este problema. En lugar de buscar la solución mediante un algoritmo discreto que explora combinaciones, codificaron el TSP en un sistema dinámico continuo cuya función de energía está diseñada de manera que sus mínimos correspondan a rutas válidas y, preferiblemente, cortas. De este modo, la solución del problema combinatorio emerge naturalmente como el estado de equilibrio al que converge el sistema dinámico. Este enfoque conecta directamente el análisis de sistemas de ecuaciones diferenciales acopladas, la teoría de funciones de Lyapunov y la optimización combinatoria, lo cual lo hace particularmente apropiado para un estudio dentro del marco de las ecuaciones diferenciales ordinarias.
+
+El presente documento desarrolla la formulación matemática completa del modelo de Hopfield-Tank aplicado a dos instancias pequeñas del TSP, una con cuatro ciudades y otra con cinco. Se establecen las matrices de distancias correspondientes, se construye explícitamente la función de energía con sus cuatro términos de penalización, se deriva el sistema de ecuaciones diferenciales acopladas que rige la dinámica del modelo y se calculan las rutas óptimas por fuerza bruta como valores de referencia objetivos.
+
+\begin{destacado}[Por qué instancias pequeñas]
+La restricción a cuatro y cinco ciudades responde a una razón metodológica concreta. En estos tamaños es posible calcular la ruta óptima exacta enumerando todas las posibilidades, lo cual permite evaluar de manera rigurosa la calidad de los resultados producidos por el modelo dinámico. Para cuatro ciudades existen únicamente tres rutas esencialmente distintas, y para cinco ciudades existen doce. Al aumentar a diez ciudades el número de rutas posibles supera los ciento ochenta mil, y la verificación exacta deja de ser práctica. Trabajar con instancias pequeñas no es una simplificación que reste valor al análisis, sino una elección que permite estudiar con profundidad el comportamiento del sistema dinámico.
+\end{destacado}
+
+% ============================================================
+% INSTANCIAS DEL PROBLEMA
+% ============================================================
+\section{Las instancias del problema}
+
+La primera instancia consiste en cuatro ciudades distribuidas en el plano euclidiano. La ciudad A se ubica en el origen, en el punto de coordenadas $(0, 0)$. La ciudad B se ubica en el punto $(2, 0)$, la ciudad C en el punto $(2, 1.5)$ y la ciudad D en el punto $(0, 1)$. Estas coordenadas describen un cuadrilátero irregular cuya ruta óptima corresponde a recorrer el contorno, propiedad que facilita la verificación visual de los resultados del modelo. Cualquier ruta que atraviese el interior del cuadrilátero necesariamente recorre mayor distancia que el contorno, lo cual proporciona un caso pedagógicamente claro.
+
+La segunda instancia consiste en cinco ciudades distribuidas en un pentágono irregular. La ciudad A se ubica en el origen $(0, 0)$, la ciudad B en $(3, 0)$, la ciudad C en $(4, 2)$, la ciudad D en $(2, 3)$ y la ciudad E en $(0, 2)$. A diferencia del caso anterior, en esta instancia la ruta óptima no resulta evidente a simple vista y requiere efectuar los cálculos explícitos. Esta característica añade una dimensión más rica al análisis, ya que evalúa la capacidad del modelo dinámico para encontrar soluciones óptimas en configuraciones donde la intuición geométrica directa no basta.
+
+% ============================================================
+% MATRICES DE DISTANCIAS
+% ============================================================
+\section{Las matrices de distancias}
+
+La información geométrica del problema se condensa en una matriz cuyas entradas indican la distancia entre cada par de ciudades. Si dos ciudades se ubican en los puntos $(x_1, y_1)$ y $(x_2, y_2)$, la distancia euclidiana entre ellas se calcula mediante la fórmula
+\begin{equation}
+    d_{xy} = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}.
+\end{equation}
+
+La matriz de distancias resultante tiene tres propiedades características que conviene tener presentes. Es simétrica, ya que la distancia de la ciudad A a la ciudad B es la misma que de B a A. Tiene ceros en la diagonal principal, porque la distancia de una ciudad a sí misma es nula. Y todos sus elementos fuera de la diagonal son estrictamente positivos, pues no existen dos ciudades en el mismo punto del plano. Esta matriz es uno de los ingredientes que alimentará directamente el cuarto término de la función de energía, el cual penaliza las rutas largas.
+
+Para la instancia de cuatro ciudades, aplicando la fórmula a cada par se obtiene la siguiente matriz, donde las filas y columnas se ordenan según las ciudades A, B, C y D respectivamente,
+\begin{equation}
+    D_4 = \begin{pmatrix}
+        0 & 2.00 & 2.50 & 1.00 \\
+        2.00 & 0 & 1.50 & 2.24 \\
+        2.50 & 1.50 & 0 & 2.06 \\
+        1.00 & 2.24 & 2.06 & 0
+    \end{pmatrix}.
+\end{equation}
+
+Para la instancia de cinco ciudades el procedimiento es análogo. La matriz resultante es de tamaño $5 \times 5$ y queda como
+\begin{equation}
+    D_5 = \begin{pmatrix}
+        0 & 3.00 & 4.47 & 3.61 & 2.00 \\
+        3.00 & 0 & 2.24 & 3.16 & 3.61 \\
+        4.47 & 2.24 & 0 & 2.24 & 4.00 \\
+        3.61 & 3.16 & 2.24 & 0 & 2.24 \\
+        2.00 & 3.61 & 4.00 & 2.24 & 0
+    \end{pmatrix}.
+\end{equation}
+
+% ============================================================
+% RUTA ÓPTIMA POR FUERZA BRUTA
+% ============================================================
+\section{La ruta óptima por fuerza bruta}
+
+Antes de introducir el modelo dinámico, conviene establecer cuál es la respuesta correcta para cada instancia mediante la evaluación exhaustiva de todas las rutas posibles. Aunque este enfoque sería computacionalmente prohibitivo para problemas grandes, en instancias pequeñas es directo y proporciona un valor de referencia objetivo contra el cual contrastar los resultados del modelo.
+
+Para la instancia de cuatro ciudades, partiendo desde la ciudad A y considerando que el orden inverso produce la misma distancia total, existen únicamente tres rutas esencialmente distintas. La ruta A-B-C-D-A tiene longitud total $d_{AB} + d_{BC} + d_{CD} + d_{DA} = 2.00 + 1.50 + 2.06 + 1.00 = 6.56$. La ruta A-B-D-C-A tiene longitud $2.00 + 2.24 + 2.06 + 2.50 = 8.80$. La ruta A-C-B-D-A tiene longitud $2.50 + 1.50 + 2.24 + 1.00 = 7.24$. Por consiguiente, la ruta óptima para la instancia de cuatro ciudades es A-B-C-D-A con una longitud total de aproximadamente 6.56 unidades.
+
+Para la instancia de cinco ciudades el cálculo procede de manera análoga sobre las doce rutas distintas. El resultado es que la ruta óptima corresponde a la secuencia A-B-C-D-E-A, con una longitud total aproximada de 11.72 unidades.
+
+\begin{objetivo}[Valores de referencia para la evaluación posterior]
+Para la instancia de cuatro ciudades, la ruta óptima es A-B-C-D-A con longitud total aproximada de 6.56 unidades. Para la instancia de cinco ciudades, la ruta óptima es A-B-C-D-E-A con longitud total aproximada de 11.72 unidades. Estos valores constituyen los puntos de referencia objetivos contra los cuales se contrastará la calidad de las soluciones producidas por el modelo dinámico.
+\end{objetivo}
+
+% ============================================================
+% FUNCIÓN DE ENERGÍA
+% ============================================================
+\section{La función de energía}
+
+La idea central de \textcite{HopfieldTank1985} consiste en codificar el problema combinatorio en una función de energía cuyos mínimos correspondan a soluciones válidas y de buena calidad. La elegancia del planteamiento reside en que, una vez construida la función de energía, la búsqueda de la solución se reduce a observar la dinámica de un sistema físico que naturalmente tiende a minimizarla.
+
+Para construir esta función es necesario primero introducir las variables del modelo. A cada par de la forma (ciudad $x$, posición $i$ en la ruta) se le asocia una variable $V_{xi}$ que toma valores en el intervalo $[0, 1]$. La interpretación es directa, ya que $V_{xi}$ representa el grado de certeza con el que el modelo considera que la ciudad $x$ ocupa la posición $i$ en la ruta. Un valor de $V_{xi} = 1$ afirma que la ciudad $x$ está en la posición $i$, mientras que $V_{xi} = 0$ afirma que no lo está. Valores intermedios corresponden a estados de indecisión durante la evolución temporal del sistema.
+
+Las variables $V_{xi}$ se organizan en una matriz cuadrada de tamaño $N \times N$, donde $N$ es el número de ciudades. Una solución válida del TSP corresponde a una matriz de permutación, es decir, una matriz donde cada fila contiene exactamente un uno y cada columna contiene exactamente un uno, con todos los demás elementos iguales a cero. Esta matriz codifica una ruta concreta. Por ejemplo, si en una matriz de cuatro por cuatro el uno de la primera fila aparece en la segunda columna, eso significa que la ciudad A ocupa la segunda posición de la ruta.
+
+La función de energía propuesta por \textcite{HopfieldTank1985} consta de cuatro términos que penalizan distintos tipos de configuraciones no deseadas. Su expresión completa es
+\begin{equation}
+\label{eq:energia}
+\begin{aligned}
+E(V) = \, & \frac{A}{2} \sum_{x=1}^{N} \left( \sum_{i=1}^{N} V_{xi} - 1 \right)^{\!2} + \frac{B}{2} \sum_{i=1}^{N} \left( \sum_{x=1}^{N} V_{xi} - 1 \right)^{\!2} \\
+& + \frac{C}{2} \left( \sum_{x=1}^{N} \sum_{i=1}^{N} V_{xi} - N \right)^{\!2} + \frac{D}{2} \sum_{x=1}^{N} \sum_{\substack{y=1 \\ y \neq x}}^{N} d_{xy} \sum_{i=1}^{N} V_{xi} \left( V_{y,i+1} + V_{y,i-1} \right).
+\end{aligned}
+\end{equation}
+
+El significado intuitivo de cada término amerita una explicación detenida, ya que cada uno cumple una función específica dentro del modelo. El primer término, ponderado por el parámetro $A$, mide para cada ciudad la diferencia entre la suma total de sus activaciones a lo largo de toda la ruta y el valor uno. Si una ciudad ocupa exactamente una posición, esa suma vale uno y la diferencia al cuadrado se anula. En cualquier otro caso, la diferencia se vuelve positiva y contribuye a la energía. Este término penaliza entonces aquellas configuraciones donde alguna ciudad no aparece en la ruta o aparece más de una vez.
+
+El segundo término, ponderado por el parámetro $B$, opera de manera dual al primero. Mide para cada posición de la ruta la diferencia entre la suma de las ciudades activas en esa posición y el valor uno. Penaliza aquellas configuraciones donde alguna posición está vacía o, peor aún, ocupada por dos o más ciudades simultáneamente. La acción combinada de los términos primero y segundo es lo que conduce al sistema, cuando los parámetros están bien elegidos, hacia matrices de permutación válidas.
+
+El tercer término, ponderado por el parámetro $C$, ejerce una restricción global sobre el sistema. Verifica que el total de elementos activos en toda la matriz sea exactamente $N$, lo cual debe ocurrir en cualquier ruta legítima de $N$ ciudades. Este término refuerza globalmente la condición de validez y compensa posibles compensaciones perversas entre los términos primero y segundo.
+
+El cuarto término, ponderado por el parámetro $D$, es el que codifica el objetivo de minimización. Suma, para cada par de ciudades distintas $x$ e $y$, el producto de la distancia entre ellas por la activación de la ciudad $x$ en la posición $i$ multiplicada por la activación de la ciudad $y$ en una posición adyacente, ya sea la inmediatamente anterior o la inmediatamente posterior. La interpretación es la siguiente. Cuando dos ciudades aparecen consecutivamente en la ruta, ese par contribuye a la energía con un valor proporcional a la distancia entre ambas. Como la dinámica busca minimizar la energía, el sistema prefiere colocar ciudades cercanas en posiciones adyacentes, que es precisamente la condición para minimizar la distancia total recorrida.
+
+% ============================================================
+% SISTEMA DE EDOs
+% ============================================================
+\section{El sistema de ecuaciones diferenciales acopladas}
+
+Una vez establecida la función de energía, la dinámica del sistema se construye de manera que esa energía decrezca monótonamente en el tiempo. La estrategia estándar consiste en asociar a cada variable de activación $V_{xi}$ una variable interna $u_{xi}$, denominada potencial de la neurona, relacionadas mediante una función sigmoide
+\begin{equation}
+\label{eq:sigmoide}
+V_{xi} = \frac{1}{2}\left( 1 + \tanh\!\left( \frac{u_{xi}}{u_0} \right) \right).
+\end{equation}
+
+Esta función sigmoide cumple dos funciones esenciales en el modelo. En primer lugar, garantiza que $V_{xi}$ siempre tome valores en el intervalo $[0, 1]$ independientemente del valor que tome $u_{xi}$, lo cual es necesario para preservar la interpretación de $V_{xi}$ como un grado de activación. En segundo lugar, es continua y diferenciable, lo que permite aplicar el cálculo diferencial sin obstáculos al construir la dinámica. El parámetro $u_0$ controla la pendiente de la transición, es decir, qué tan abruptamente la sigmoide pasa de cero a uno cuando $u_{xi}$ cruza el origen. Valores pequeños de $u_0$ producen sigmoides muy abruptas, casi escalonadas, mientras que valores grandes producen transiciones suaves.
+
+La ecuación dinámica que rige la evolución de cada $u_{xi}$ se obtiene haciendo que la derivada temporal sea proporcional al gradiente negativo de la energía respecto a $V_{xi}$. Tras desarrollar las derivadas parciales correspondientes, se llega a
+\begin{equation}
+\label{eq:edo}
+\frac{du_{xi}}{dt} = -\frac{u_{xi}}{\tau} - A\!\sum_{\substack{j=1 \\ j \neq i}}^{N}\! V_{xj} - B\!\sum_{\substack{y=1 \\ y \neq x}}^{N}\! V_{yi} - C\!\left( \sum_{y,j} V_{yj} - N \right) - D\!\sum_{\substack{y=1 \\ y \neq x}}^{N}\! d_{xy}\!\left( V_{y,i+1} + V_{y,i-1} \right).
+\end{equation}
+
+Existe una ecuación de esta forma para cada par $(x, i)$, lo que produce un total de $N^2$ ecuaciones diferenciales acopladas. En la instancia de cuatro ciudades el sistema consta de dieciséis ecuaciones, y en la de cinco ciudades, de veinticinco. El calificativo \emph{acopladas} reviste particular importancia porque indica que la evolución de cada variable depende de los valores actuales de todas las demás. Esta interdependencia impide resolver las ecuaciones de manera independiente y obliga a integrarlas simultáneamente, lo cual justifica naturalmente el uso de métodos numéricos como Euler y Runge-Kutta.
+
+\begin{metodologia}[Interpretación del término de decaimiento]
+El término $-u_{xi}/\tau$ que aparece al inicio de la ecuación \eqref{eq:edo} se conoce como término de decaimiento o relajación pasiva. Su función es dotar al sistema de una tendencia natural a regresar al equilibrio cuando no hay otras fuerzas actuando sobre él. El parámetro $\tau$, con unidades de tiempo, controla la velocidad de este decaimiento. Físicamente, este término es análogo al término de fricción en un sistema mecánico amortiguado, y desde el punto de vista del análisis de estabilidad, garantiza que el sistema sea disipativo, propiedad esencial para que la función de energía actúe como una función de Lyapunov.
+\end{metodologia}
+
+% ============================================================
+% PARÁMETROS
+% ============================================================
+\section{Valores de los parámetros}
+
+La elección de los parámetros $A$, $B$, $C$ y $D$ resulta determinante para el funcionamiento del modelo. Si las penalizaciones de factibilidad son demasiado bajas en relación con el término de distancia, el sistema puede converger a configuraciones donde la energía es baja pero la matriz $V$ no representa una ruta válida. Si por el contrario las penalizaciones son demasiado altas, el sistema puede quedar atrapado en cualquier matriz de permutación sin priorizar las rutas cortas, perdiendo de vista el objetivo de optimización.
+
+Los valores que se adoptan en este trabajo corresponden a los clásicos propuestos en la literatura original \parencite{HopfieldTank1985} y discutidos extensamente en revisiones posteriores \parencite{TalavanYanez2002, Potvin2003}. Específicamente se establecen $A = B = 500$, $C = 200$ y $D = 500$. El parámetro $\tau$ se fija en uno y el parámetro $u_0$ que controla la pendiente de la sigmoide se fija en $0.02$. Si durante las simulaciones se observa que el sistema no converge a soluciones válidas, será necesario explorar variaciones de estos parámetros, tal como sugieren \textcite{ElAlaouiEttaouil2023} en su análisis sobre la estabilidad del modelo continuo de Hopfield.
+
+% ============================================================
+% PROYECCIÓN
+% ============================================================
+\section{Proyección hacia el análisis numérico}
+
+Con la formulación matemática completamente establecida, el siguiente paso consiste en la integración numérica del sistema de EDOs \eqref{eq:edo} mediante el método de Euler explícito, seguido por el método de Runge-Kutta de cuarto orden. La curva de la energía $E(t)$ contra el tiempo será el principal instrumento de diagnóstico, ya que su decrecimiento monótono confirma que el sistema se comporta como predice la teoría y que la función de energía actúa efectivamente como función de Lyapunov. La comparación entre ambos métodos numéricos permitirá evaluar no solo la calidad de las soluciones obtenidas, sino también la fidelidad de las trayectorias simuladas respecto a la dinámica continua subyacente \parencite{Goemaere2024}.
+
+% ============================================================
+% REFERENCIAS APA 7
+% ============================================================
+\nocite{*}
+\printbibliography[title={Referencias}]
+
+\end{document}
